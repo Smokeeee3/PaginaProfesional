@@ -7,7 +7,14 @@ body {
     margin: 0;
     padding: 0;
 }
-
+.informacion-estilo {
+    background-color: #465C63;
+    color: #ffffff;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.10);
+    margin: 0;
+    text-align: center;
+    padding: 0;
+}
 header {
     font-family: Arial black, sans-serif;
     text-align: center;
@@ -84,7 +91,7 @@ h2 {
 
 
 .contacto-estilo {
-    background-color: #f9f9f9;
+    background-color: #597b85;
     padding: 20px;
     border-radius: 5px;
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.5); /* sombra al formulario */
@@ -94,6 +101,7 @@ h2 {
 .contacto-estilo input[type="email"],
 .contacto-estilo input[type="subject"], /* estilos para el nuevo campo */
 .contacto-estilo textarea {
+    background-color: #c7dee6;
     width: 100%;
     padding: 12px 20px;
     margin: 8px 0;
@@ -105,17 +113,19 @@ h2 {
 
 .contacto-estilo input[type="checkbox"] { /*  estilos para la casilla de verificación */
     margin: 10px 0;
+    background-color: #c7dee6;
 
 }
 .contacto-estilo label { /*  estilos para la etiqueta */
     display: inline-block;
+    background-color: #c7dee6;
     margin-bottom: 10px;
 }
 
 .contacto-estilo button[type="submit"] {
     width: 100%;
-    background-color: #4CAF50;
-    color: white;
+    background-color: #1B8EB1;
+    color:  #c7dee6;
     padding: 14px 20px;
     margin: 8px 0;
     border: none;
@@ -124,11 +134,11 @@ h2 {
 }
 
 .contacto-estilo button[type="submit"]:hover {
-    background-color: #45a049;
+    background-color: #c7dee6;
 }
 
 footer {
-    background-color: #333;
+    background-color:  #c7dee6;
     color: #fff;
     text-align: center;
     padding: 20px 0;
