@@ -1,8 +1,31 @@
+/* Estilos base */
 body {
     font-family: Arial, sans-serif;
-    color: #0c0c0c;
+    background-color: #465C63;
+    color: #ffffff;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
     margin: 0;
     padding: 0;
+}
+
+header {
+    font-family: Arial black, sans-serif;
+    text-align: center;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); 
+    padding: 10px 0;
+    background-color: #ffffff;
+    color: #ffffff;
+    text-align: center;
+    padding: 100px 0;
+    background: url("https://cdn.pixabay.com/photo/2022/09/17/23/56/moon-7461962_1280.jpg") no-repeat center center fixed;
+    background-color: rgba(0, 0, 0, 0.5); /* El último valor puede variar entre 0.0 - 1.0 */
+    background-blend-mode: multiply;
+    background-size: cover;
+    background-size: 100% 100%;
+}
+
+header h1 {
+    font-size: 2.5em;
 }
 
 .container {
@@ -12,26 +35,14 @@ body {
     padding: 20px 0;
 }
 
-header {
-    background-color: #ffffff;
-    color: #0a0a0a;
-    text-align: center;
-    padding: 100px 0;
-    background: url("https://cdn.pixabay.com/photo/2017/09/18/15/38/moon-2762111_1280.jpg");
-}
-
 .btn {
     display: inline-block;
-    background-color: #007bff;
+    background-color: #1B8EB1;
     color: rgb(238, 236, 236);
     padding: 10px 20px;
     text-decoration: none;
     border-radius: 5px;
     transition: background-color 0.3s ease;   
-}
-
-header h1 {
-    font-size: 2.5em;
 }
 
 .btn:hover {
@@ -55,42 +66,65 @@ h2 {
     font-size: 1.5em;
 }
 
-.testimonio {
+.testimonio-estilo {
+    box-shadow: 0 4px 8px 0 rgba(2, 2, 2, 2.20);
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    background-color: #597b85;
+    transition: 0.3s;
+    border-radius: 5px;
+}
+
+.testimonio-estilo:hover {
+    box-shadow: 0 8px 16px 0 rgba(2, 2, 2, 2.20);
+    transition: 0.3s;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    border-radius: 5px;
+}
+
+
+
+.contacto-estilo {
     background-color: #f9f9f9;
     padding: 20px;
     border-radius: 5px;
-    margin-bottom: 30px;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.5); /* sombra al formulario */
 }
 
-.testimonio p {
-    font-style: italic;
-}
-
-.testimonio cite {
-    font-weight: bold;
-}
-
-form {
-    max-width: 600px;
-    margin: 0 auto;
-}
-
-input[type="text"],
-input[type="email"],
-textarea {
-    width:100%;
-    padding: 10px;
-    margin-bottom: 20px;
-    border-radius: 5px;
+.contacto-estilo input[type="text"],
+.contacto-estilo input[type="email"],
+.contacto-estilo input[type="subject"], /* estilos para el nuevo campo */
+.contacto-estilo textarea {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
     border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
 }
 
-button[type="submit"]:hover {
-    background-color: #0056b3;
+.contacto-estilo input[type="checkbox"] { /*  estilos para la casilla de verificación */
+    margin: 10px 0;
+
+}
+.contacto-estilo label { /*  estilos para la etiqueta */
+    display: inline-block;
+    margin-bottom: 10px;
 }
 
-button[type="submit"] {
-    background-color: #007bff;
+.contacto-estilo button[type="submit"] {
+    width: 100%;
+    background-color: #4CAF50;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.contacto-estilo button[type="submit"]:hover {
+    background-color: #45a049;
 }
 
 footer {
@@ -98,4 +132,61 @@ footer {
     color: #fff;
     text-align: center;
     padding: 20px 0;
+}
+
+/* Estilos para dispositivos con pantalla de hasta 600px */
+@media only screen and (max-width: 600px) {
+    header {
+        padding: 50px 0;
+    }
+
+    .container {
+        width: 100%;
+    }
+
+    .btn {
+        padding: 14px 20px;
+        margin: 8px 0;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+    }
+
+    .contacto-estilo input[type="text"],
+    .contacto-estilo input[type="email"],
+    .contacto-estilo textarea {
+        width: 100%;
+    }
+
+    .contacto-estilo button[type="submit"] {
+        width: 100%;
+    }
+}
+
+/* Estilos para tabletas (601px a 768px) */
+@media only screen and (min-width: 601px) and (max-width: 768px) {
+    .container {
+        width: 95%;
+    }
+}
+
+/* Estilos para pantallas pequeñas (769px a 1024px) */
+@media only screen and (min-width: 769px) and (max-width: 1024px) {
+    .container {
+        width: 90%;
+    }
+}
+
+/* Estilos para pantallas grandes (1025px a 1200px) */
+@media only screen and (min-width: 1025px) and (max-width: 1200px) {
+    .container {
+        width: 85%;
+    }
+}
+
+/* Estilos para pantallas extra grandes (más de 1200px) */
+@media only screen and (min-width: 1201px) {
+    .container {
+        width: 80%;
+    }
 }

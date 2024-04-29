@@ -4,13 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="StyleSheet" href="styles/style.css">
-    <title>Document</title>
+    <title>Mundaca SpA</title>
 </head>
 <body>
     <header>
         <div class="container">
-            <h1> Bienvenido a nuestra Web </h1>
-            <p>Sitio web de nuestra empresa familiar dedicada 20 años al rubro</p>
+            <h1> Bienvenido a nuestra Web Mundaca SpA </h1>
+            <p>Sitio web de nuestra empresa familiar dedicada 25 años al rubro</p>
             <a href="#caracteristicas" class="btn">Ver características</a>
         </div>   
     </header>
@@ -31,37 +31,101 @@
                 <p>Ofrecemos soporte tecnico 24/7</p>
             </div>
         </div>
-    </section>
-
-    <section id="testimonios">
-        <div class="container">
-            <h2>Testimonios</h2>
-            <div class="testimonio">
-                <p>"¡Increíble servicio! ¡Gracias por hacer mi vida más fácil!"</p>
-                <cite>- Cliente feliz</cite>
+        <section id="testimonios">
+            <div class="container">
+                <h2>Testimonios</h2>
+                <div class="testimonio testimonio-estilo">
+                    <p>"¡Increíble servicio! ¡Gracias por hacer mi vida más fácil!"</p>
+                    <cite>- Cliente feliz</cite>
+                </div>
+                <div class="testimonio testimonio-estilo">
+                    <p>"Nunca pensé que encontraría una solución tan eficaz y sencilla"</p>
+                    <cite>- Otro cliente satisfecho</cite>
+                </div>
+                <div class="testimonio testimonio-estilo">
+                    <p>"Excelente atencion me quedo con sus servicios ¡Gracias!"</p>
+                    <cite>- Otro cliente contento</cite>
+                </div>
             </div>
-            <div class="testimonio">
-                <p>"Nunca pensé que encontraría una solución tan genial"</p>
-                <cite>- Otro cliente satisfecho</cite>
-            </div>
-        </div>
-
-    </section>
+        </section>
     <section id="contacto">
         <div class="container">
             <h2>Contacto</h2>
-            <form action="#" method="post">
+            <form action="#" method="post" class="contacto-estilo">
                 <input type="text" name="name" placeholder="Nombre" required>
                 <input type="email" name="email" placeholder="Correo" required>
+                <input type="text" name="subject" placeholder="Asunto" required> <!-- Agregamos un campo para el asunto -->
                 <textarea name="message" placeholder="Mensaje" required></textarea>
+                <input type="checkbox" id="accept" name="accept" required> <!-- Agregamos una casilla de verificación -->
                 <button type="submit" class="btn">Enviar mensaje</button>
             </form>
         </div>
     </section>
-    <footer>
-        <div class="container">
-            <p>👏 Desarrollado por Héctor Mundaca © 👏</p>
+    <div class="container">
+    </div>
+            <p style="text-align: center;">👏 Desarrollado por Héctor Mundaca © 👏</p>
         </div>
-    </footer>
+    </section>
+    <!-- ... -->
+    <script>
+        // Obtén referencias a los elementos de entrada y la casilla de verificación
+        var nameInput = document.querySelector('input[name="name"]');
+        var emailInput = document.querySelector('input[name="email"]');
+        var subjectInput = document.querySelector('input[name="subject"]');
+        var messageInput = document.querySelector('textarea[name="message"]');
+        var acceptCheckbox = document.querySelector('input[name="accept"]');
+    
+        // Función para verificar si todos los campos están llenos
+        function checkInputs() {
+            if (nameInput.value && emailInput.value && subjectInput.value && messageInput.value) {
+                acceptCheckbox.checked = true;
+                acceptCheckbox.style.backgroundColor = '#90EE90'; // Cambia el color de fondo a verde claro
+            } else {
+                acceptCheckbox.checked = false;
+                acceptCheckbox.style.backgroundColor = ''; // Restablece el color de fondo
+            }
+        }
+        // Escucha los eventos de entrada en los campos del formulario
+        nameInput.addEventListener('input', checkInputs);
+        emailInput.addEventListener('input', checkInputs);
+        subjectInput.addEventListener('input', checkInputs);
+        messageInput.addEventListener('input', checkInputs);
+    </script>
+    <script>
+        // Obtén referencias a los elementos de entrada y la casilla de verificación
+        var nameInput = document.querySelector('input[name="name"]');
+        var emailInput = document.querySelector('input[name="email"]');
+        var subjectInput = document.querySelector('input[name="subject"]');
+        var messageInput = document.querySelector('textarea[name="message"]');
+        var acceptCheckbox = document.querySelector('input[name="accept"]');
+        var form = document.querySelector('.contacto-estilo'); // Obtén una referencia al formulario
+    
+        // Función para verificar si todos los campos están llenos
+        function checkInputs() {
+            if (nameInput.value && emailInput.value && subjectInput.value && messageInput.value) {
+                acceptCheckbox.checked = true;
+                acceptCheckbox.style.backgroundColor = '#90EE90'; // Cambia el color de fondo a verde claro
+            } else {
+                acceptCheckbox.checked = false;
+                acceptCheckbox.style.backgroundColor = ''; // Restablece el color de fondo
+            }
+        }
+    
+        // Escucha los eventos de entrada en los campos del formulario
+        nameInput.addEventListener('input', checkInputs);
+        emailInput.addEventListener('input', checkInputs);
+        subjectInput.addEventListener('input', checkInputs);
+        messageInput.addEventListener('input', checkInputs);
+    
+        // Escucha el evento de envío del formulario
+        form.addEventListener('submit', function(event) {
+            event.preventDefault(); // Previene el comportamiento predeterminado del formulario
+    
+            // Verifica si todos los campos están llenos y la casilla de verificación está marcada
+            if (nameInput.value && emailInput.value && subjectInput.value && messageInput.value && acceptCheckbox.checked) {
+                alert('GRACIAS POR CONTACTARSE CON NOSOTROS'); // Muestra un mensaje
+            }
+        });
+    </script>
 </body>
 </html>
