@@ -1,38 +1,40 @@
-/* Estilos base */
+ /* Estilos base */
 body {
+    background: url("https://cdn.pixabay.com/photo/2022/09/17/23/56/moon-7461962_1280.jpg") no-repeat center center fixed;
+    background-color: rgba(0, 0, 0, 0.5); 
+    background-blend-mode: multiply;
+    background-size: cover;
+    background-size: 100% 100%;
     font-family: Arial, sans-serif;
     background-color: #465C63;
     color: #ffffff;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
     margin: 0;
     padding: 0;
+    animation: fadeIn 2.5s ease;
 }
 .informacion-estilo {
-    background-color: #465C63;
     color: #ffffff;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.10);
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
     margin: 0;
     text-align: center;
-    padding: 0;
+    padding: 30 0;
 }
 header {
     font-family: Arial black, sans-serif;
     text-align: center;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); 
     padding: 10px 0;
-    background-color: #ffffff;
-    color: #ffffff;
+    color: #ffff;
     text-align: center;
     padding: 100px 0;
-    background: url("https://cdn.pixabay.com/photo/2022/09/17/23/56/moon-7461962_1280.jpg") no-repeat center center fixed;
-    background-color: rgba(0, 0, 0, 0.5); /* El último valor puede variar entre 0.0 - 1.0 */
-    background-blend-mode: multiply;
-    background-size: cover;
-    background-size: 100% 100%;
+    animation: fadeIn 2.5s ease;
 }
 
 header h1 {
     font-size: 2.5em;
+    color: #ffffff;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 
 .container {
@@ -40,9 +42,21 @@ header h1 {
     height: 300px;
     margin: 0 auto;
     padding: 20px 0;
+    color: #ffffff;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+.rating {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px 0;
+    color: #ffffff;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    font-size: 2em;
 }
 
 .btn {
+    animation: fadeIn 2s ease;
     display: inline-block;
     background-color: #1B8EB1;
     color: rgb(238, 236, 236);
@@ -52,29 +66,44 @@ header h1 {
     transition: background-color 0.3s ease;   
 }
 
+
+.star.selected {
+    color: gold;
+}
+
+
 .btn:hover {
     background-color: #0056b3
 }
 
 section {
     padding: 50px 0;
+    color: #ffffff;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 
 h2 {
     text-align: center;
+    color: #ffffff;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); 
 }
 
 .caracteristica {
+    color: #ffffff;
     text-align: center;
     margin-bottom: 30px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); 
 }
 
 .caracteristica h3 {
     font-size: 1.5em;
+    color: #ffffff;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); 
 }
 
 .testimonio-estilo {
     box-shadow: 0 4px 8px 0 rgba(2, 2, 2, 2.20);
+    color: #ffffff;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
     background-color: #597b85;
     transition: 0.3s;
@@ -84,6 +113,7 @@ h2 {
 .testimonio-estilo:hover {
     box-shadow: 0 8px 16px 0 rgba(2, 2, 2, 2.20);
     transition: 0.3s;
+    color: #ffffff;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
     border-radius: 5px;
 }
@@ -92,6 +122,7 @@ h2 {
 
 .contacto-estilo {
     background-color: #597b85;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); 
     padding: 20px;
     border-radius: 5px;
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.5); /* sombra al formulario */
@@ -102,6 +133,7 @@ h2 {
 .contacto-estilo input[type="subject"], /* estilos para el nuevo campo */
 .contacto-estilo textarea {
     background-color: #c7dee6;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
     width: 100%;
     padding: 12px 20px;
     margin: 8px 0;
@@ -114,15 +146,18 @@ h2 {
 .contacto-estilo input[type="checkbox"] { /*  estilos para la casilla de verificación */
     margin: 10px 0;
     background-color: #c7dee6;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 
 }
 .contacto-estilo label { /*  estilos para la etiqueta */
     display: inline-block;
     background-color: #c7dee6;
     margin-bottom: 10px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 
 .contacto-estilo button[type="submit"] {
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
     width: 100%;
     background-color: #1B8EB1;
     color:  #c7dee6;
@@ -198,5 +233,49 @@ footer {
 @media only screen and (min-width: 1201px) {
     .container {
         width: 80%;
+    }
+
+    @keyframes fadeIn {
+        0% {opacity: 0;}
+        100% {opacity: 1;}
+    }
+
+    @keyframes pulse {
+        0% {
+            transform: scale(1);
+        }
+        50% {
+            transform: scale(1.1);
+        }
+        100% {
+            transform: scale(1);
+        }
+    }
+    
+    .star {
+        font-size: 3em;
+        cursor: pointer;
+        color: grey;
+        animation: pulse 1s infinite;
+        transform: translateX(0);
+        transition: transform 0.3s ease;
+    }
+    
+    .star.selected {
+        color: gold;
+        animation: none;
+        transform: translateX(10px);
+    }
+
+    @keyframes pulse {
+        0% {
+            transform: scale(1);
+        }
+        50% {
+            transform: scale(1.2);
+        }
+        100% {
+            transform: scale(1);
+        }
     }
 }
